@@ -1,6 +1,7 @@
 class Gear
   attr_reader :chainring, :cog, :rim, :tire
   # always wrap instance variables in accessor methods instead of directly referring to variables
+  # using attr_reader caused Ruby to create a simple wrapper for the variable
   def initialize(chainring, cog, rim, tire)
     @chainring = chainring
     @cog = cog
