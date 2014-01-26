@@ -9,6 +9,7 @@ class Gear
   end
 
   def ratio
+    # @chainring / @cog.to_f <----- road to ruin
     chainring / cog.to_f
   end
 
