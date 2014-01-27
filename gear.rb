@@ -14,9 +14,19 @@ class Gear
     chainring / cog.to_f
   end
 
+  # the method below calculates both diameter and gear_inches
+  # def gear_inches
+  #   # tire goes around the rim twice for diameter
+  #   ratio * (rim + (tire * 2))
+  # end
+
+  # here we refactor gear_inches into two methods
   def gear_inches
-    # tire goes around the rim twice for diameter
-    ratio * (rim + (tire * 2))
+    ratio * diameter
+  end
+
+  def diameter
+    rim + (tire * 2)
   end
 end
 
