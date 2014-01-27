@@ -20,9 +20,20 @@ class RevealingReferences
     @wheels = wheelify(data)
   end
 
+  # the method below clearly has two responsibilities - iterate over wheels and calculate diamter
+  # def diameters
+  #   wheels.collect {|wheel|
+  #     wheel.rim + (wheel.tire * 2)}
+  # end
+
+  # first iterate over the array
   def diameters
-    wheels.collect {|wheel|
-      wheel.rim + (wheel.tire * 2)}
+    wheels.collect {|wheel| diameter(wheel)}
+  end
+
+  # second - calculate the diameter of one wheel
+  def diameter(wheel)
+    wheel.rim + (wheel.tire * 2)
   end
 
   # instead of defining a class, Struct creates small, lightweight objects rim and tire
