@@ -21,7 +21,7 @@ class Gear
   #   ratio * (rim + (tire * 2))
   # end
 
-  # here we refactor gear_inches into two methods
+  # here we refactor gear_inches
   def gear_inches
     ratio * wheel.diameter
   end
