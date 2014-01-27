@@ -26,7 +26,9 @@ class RevealingReferences
   #     wheel.rim + (wheel.tire * 2)}
   # end
 
-  # first iterate over the array
+# separate iteration from the action being performed
+
+# first iterate over the array
   def diameters
     wheels.collect {|wheel| diameter(wheel)}
   end
@@ -37,7 +39,6 @@ class RevealingReferences
   end
 
   # instead of defining a class, Struct creates small, lightweight objects rim and tire
-
   Wheel = Struct.new(:rim, :tire)
   def wheelify(data)
     data.collect {|cell|
